@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Andrew Soto's embedded systems and robotics project portfolio.">
+  <title>Andrew Soto | Embedded Systems & Robotics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Andrew Soto, home">AS<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Projects</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="https://github.com/andresot00">GitHub profile</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> COMPUTER ENGINEERING · CSULB</p>
+        <h1>Building systems that<br><em>move, sense, and respond.</em></h1>
+        <p class="hero-intro">I’m Andrew Soto, a computer engineering student focused on embedded firmware, robotics, and the connection between code and real hardware.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore projects</a>
+          <a class="text-link" href="https://github.com/andresot00">View GitHub profile <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Abstract circuit-board illustration">
+        <div class="visual-grid"></div>
+        <div class="chip"><span>MCU</span><b>01</b></div>
+        <div class="trace trace-a"></div><div class="trace trace-b"></div><div class="trace trace-c"></div>
+        <div class="node node-a"></div><div class="node node-b"></div><div class="node node-c"></div>
+        <div class="visual-caption"><span>FIRMWARE</span><span>SENSING</span><span>CONTROL</span></div>
+      </div>
+      <div class="hero-foot"><span>01 / 03</span><span>Selected engineering work</span><span>Long Beach, California</span></div>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="section-heading">
+        <div><p class="eyebrow">PROJECTS · 2026—PRESENT</p><h2>Selected work</h2></div>
+        <p class="section-note">Three ongoing builds exploring control, sensing, and system integration.</p>
+      </div>
+
+      <article class="project-card project-mouse">
+        <div class="project-index">01</div>
+        <div class="project-body">
+          <div class="project-topline"><span class="status status-active">IN DEVELOPMENT</span><span class="project-date">COMPETITION TARGET · SPRING 2027</span></div>
+          <h3>ESP32 Micromouse</h3>
+          <p class="project-summary">An autonomous maze robot in development around an ESP32-WROOM-32E. The first phase is validating the existing drive and IR hardware before implementing the maze solver.</p>
+          <div class="project-details">
+            <div><h4>FOCUS</h4><p>IR calibration · encoder feedback · flood-fill navigation</p></div>
+            <div><h4>HARDWARE</h4><p>ESP32 · TT gearmotors · IR emitter/receiver kit · phototransistors</p></div>
+          </div>
+          <div class="tags"><span>C/C++</span><span>ESP32</span><span>ADC</span><span>PWM</span><span>Maze planning</span></div>
+          <p class="project-next"><b>Next:</b> identify sensor/encoder interfaces and calibrate wall readings.</p>
+        </div>
+        <div class="project-art art-maze" aria-hidden="true"><div class="maze-lines"></div><span>16 × 16<br>PLANNED MAP</span></div>
+      </article>
+
+      <article class="project-card project-romi">
+        <div class="project-index">02</div>
+        <div class="project-body">
+          <div class="project-topline"><span class="status status-active">IN PROGRESS</span><span class="project-date">EXPECTED · DEC 2026</span></div>
+          <h3>Romi Following Robot</h3>
+          <p class="project-summary">Developing C firmware for a Pololu Romi with a TI TM4C123 LaunchPad. The work brings sensor sampling, distance calibration, motor commands, and wall-following behavior together.</p>
+          <div class="project-details">
+            <div><h4>FOCUS</h4><p>ADC sequencer · PWM · interrupts · calibration</p></div>
+            <div><h4>HARDWARE</h4><p>TM4C123 LaunchPad · Romi · three Sharp IR sensors · H-bridge</p></div>
+          </div>
+          <div class="tags"><span>C</span><span>TM4C123</span><span>ADC0</span><span>Timers</span><span>Motor control</span></div>
+          <p class="project-next"><b>Next:</b> verify sensing and motor behavior separately, then integrate the follower loop.</p>
+        </div>
+        <div class="project-art art-signal" aria-hidden="true"><div class="signal-label">SENSOR → CONTROL → MOTION</div><svg viewBox="0 0 360 130" role="presentation"><path d="M8 80h46V35h34v45h45V56h35v24h42V27h34v53h108"/><path class="signal-secondary" d="M8 106h65v-22h48v22h63V93h50v13h118"/></svg></div>
+      </article>
+
+      <article class="project-card project-sortiq">
+        <div class="project-index">03</div>
+        <div class="project-body">
+          <div class="project-topline"><span class="status status-planning">IN DEVELOPMENT</span><span class="project-date">EXPECTED · DEC 2026</span></div>
+          <h3>SortIQ Parts Sorter</h3>
+          <p class="project-summary">A camera-assisted tabletop sorter. The architecture is being refined across vision, embedded control, feeder actuation, and a smart-servo pick-and-place arm.</p>
+          <div class="project-details">
+            <div><h4>FOCUS</h4><p>Visual classification · UART interfaces · sequencing</p></div>
+            <div><h4>PROPOSED SYSTEM</h4><p>Raspberry Pi 5 · TM4C123 · PCA9685 feeder servo · Hiwonder xArm controller</p></div>
+          </div>
+          <div class="tags"><span>Rust (exploring)</span><span>Computer vision</span><span>UART</span><span>Servo control</span></div>
+          <p class="project-next"><b>Targets:</b> 95% classification accuracy and under 8 seconds per item; neither is a measured result yet.</p>
+        </div>
+        <div class="project-art art-sort" aria-hidden="true"><div class="sort-path"><i></i><i></i><i></i><i></i></div><span>VISION<br>→ SORT</span></div>
+      </article>
+      <p class="repo-note">Project repositories are being organized. Each project card will link to its source, documentation, and test notes as those repos are created.</p>
+    </section>
+
+    <section class="approach-section" id="approach">
+      <div class="approach-intro"><p class="eyebrow">HOW I WORK</p><h2>Build in layers.<br><em>Measure each one.</em></h2></div>
+      <div class="approach-list">
+        <div><span>01</span><p><b>Start with the signal.</b> Verify pinouts, voltage levels, and raw sensor or encoder readings.</p></div>
+        <div><span>02</span><p><b>Test modules independently.</b> Bring up sensing, timing, and motor drive before combining them.</p></div>
+        <div><span>03</span><p><b>Integrate and record.</b> Document wiring, behavior, test conditions, failures, and measured results.</p></div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-card">
+        <p class="eyebrow">ABOUT</p>
+        <h2>Embedded systems,<br>from pin to platform.</h2>
+        <p>I’m pursuing a B.S. in Computer Engineering and a Computer Science minor at California State University, Long Beach, with an expected graduation of Fall 2027. My current work spans microcontroller firmware, robot navigation, motor control, and technical documentation.</p>
+        <a class="text-link" href="https://github.com/andresot00">Find me on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+      <aside class="experience-card"><p class="eyebrow">ENGINEERING EXPERIENCE</p><h3>PPE Engineering</h3><p class="role">Engineering Design & Documentation Intern · Apr 2025—Feb 2026</p><p>Created wiring-layout drawings and contributed electrical details, system descriptions, and assembly information for a technical manual covering aerospace fastener machinery.</p><div class="tags"><span>Wiring layouts</span><span>AutoCAD</span><span>SolidWorks</span><span>Technical writing</span></div></aside>
+    </section>
+
+    <section class="closing-cta"><p class="eyebrow">KEEP IN TOUCH</p><h2>Interested in embedded systems<br>and robotics opportunities.</h2><a class="button button-primary" href="https://github.com/andresot00">See GitHub profile</a></section>
+  </main>
+
+  <footer><a class="wordmark" href="#top">AS<span>.</span></a><p>Andrew Soto · Embedded Systems & Robotics</p><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>
